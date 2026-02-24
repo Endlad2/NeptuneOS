@@ -12,8 +12,18 @@ RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     python3-venv \
-    libxml2-utils \
     git \
+    bash \
+    wget \
+    curl \
+    cmake \
+    ninja-build \
+    build-essential \
+    gcc \
+    g++ \
+    make \
+    pkg-config \
+    libxml2-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Настройка Python
