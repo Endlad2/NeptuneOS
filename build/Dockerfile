@@ -9,6 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Устанавливаем необходимые пакеты
 RUN apt-get update && apt-get install -y \
+    # Базовые инструменты
     python3 \
     python3-pip \
     python3-venv \
@@ -16,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     bash \
     wget \
     curl \
+    # Инструменты сборки
     cmake \
     ninja-build \
     build-essential \
@@ -23,6 +25,11 @@ RUN apt-get update && apt-get install -y \
     g++ \
     make \
     pkg-config \
+    # LLVM/Clang (нужен для seL4)
+    clang \
+    llvm \
+    lld \
+    # Дополнительные утилиты
     libxml2-utils \
     && rm -rf /var/lib/apt/lists/*
 
