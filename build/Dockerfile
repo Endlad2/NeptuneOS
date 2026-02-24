@@ -49,7 +49,7 @@ RUN pip3 install --no-cache-dir \
 WORKDIR /workspace
 
 # Клонируем репозиторий
-RUN git clone https://github.com/cl91/NeptuneOS.git
+RUN git clone https://github.com/Endlad2/NeptuneOS.git
 
 WORKDIR /workspace/NeptuneOS
 
