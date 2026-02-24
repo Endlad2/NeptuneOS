@@ -59,7 +59,8 @@ WORKDIR /workspace/NeptuneOS
 RUN git submodule update --init --recursive
 
 # Делаем build.sh исполняемым
-RUN bash build.sh
+RUN bash build.sh [${ARCH}] [${BUILD_TYPE}]
+RUN mkiso.sh [${ARCH}] [${BUILD_TYPE}]
 
 # Запускаем сборку с переданными аргументами
 
