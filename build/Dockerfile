@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     python3-venv \
     git \
     bash \
+    cpio \
     wget \
     curl \
     # Инструменты сборки
