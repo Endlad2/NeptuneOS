@@ -40,10 +40,9 @@ WORKDIR /workspace/NeptuneOS
 RUN git submodule update --init --recursive
 
 # Делаем build.sh исполняемым
-RUN chmod +x build.sh
+RUN bash build.sh
 
 # Запускаем сборку с переданными аргументами
-RUN echo "Запуск сборки с ARCH=${ARCH}, BUILD_TYPE=${BUILD_TYPE}" && \
-    ./build.sh ${ARCH} ${BUILD_TYPE}
+
 
 CMD ["/bin/bash"]
