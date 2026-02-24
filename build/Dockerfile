@@ -9,7 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Устанавливаем необходимые пакеты
 RUN apt-get update && apt-get install -y \
-    # Базовые инструменты
+    mingw-w64 \
+    mingw-w64-tools \
     python3 \
     python3-pip \
     python3-venv \
